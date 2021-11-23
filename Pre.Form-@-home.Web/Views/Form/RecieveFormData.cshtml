@@ -1,0 +1,9 @@
+﻿@model SimpelFormViewModel;
+
+
+
+<h2>Recieved data</h2>
+<div>@Model.FirstName</div>
+<div>@Model.LastName</div>
+<div>@Model.Email</div>
+<div>@(Model.Subscribed == true?"You're subscribed":"You're not subscribed")</div>
