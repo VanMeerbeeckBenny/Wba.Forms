@@ -1,4 +1,4 @@
-﻿@model SimpelFormRecievedAnswersViewModel;
+﻿@model SimpelFormViewModel;
 
 
 
@@ -6,6 +6,7 @@
 <div>@Model.FirstName</div>
 <div>@Model.LastName</div>
 <div>@Model.Email</div>
-<div>@Model.Country</div>
+<div>@Model.SelectItem.Countries[Model.SelectItem.SelectCountryId]</div>
 <div>@Model.Password</div>
+<div>@Model.RepeatPassword</div>
 <div>@(Model.Subscribed == true?"You're subscribed":"You're not subscribed")</div>
