@@ -35,7 +35,17 @@
                     </div>
                 </div>
                 <div class=" col-md-3">
+                    <div class="form-group">
+                        <label asp-for="Password"></label><br />
+                        <input class="form-control" asp-for="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
 
+                    <div class="form-group">
+                        <label asp-for="RepeatPassword"></label><br />
+                        <input class="form-control" asp-for="RepeatPassword" />
+                        <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+                    </div>
                     <div class=" form-group">
                         <label asp-for="SelectItem.SelectCountryId"></label>
                         <select class=" form-select" asp-for="SelectItem.SelectCountryId"
@@ -47,7 +57,7 @@
                         <label class="form-check-label" asp-for="Subscribed"></label>
                         <input class="form-check-input" asp-for="Subscribed" />
                     </div>
-                 
+
                 </div>
                    
                 
