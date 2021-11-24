@@ -1,0 +1,27 @@
+﻿@model AllSelectsVm;
+
+
+    <div class="row">
+        <form method="post">
+            <fieldset>
+                <legend>
+                    <h3>Select with mvc</h3>
+                </legend>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="GroupSelect.SelectCountryId"></label><br />
+                        <select class="form-control form-select" asp-for="GroupSelect.SelectCountryId"
+                                asp-items="Model.GroupSelect.Countries">
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="MultiSelect.SelectedLanguagesIds"></label><br />
+                        <select class="form-control form-select" asp-for="MultiSelect.SelectedLanguagesIds"
+                                asp-items="Model.MultiSelect.Languages">
+                        </select>
+                    </div>
+                </div>
+            </fieldset>           
+        </form>
+    </div>

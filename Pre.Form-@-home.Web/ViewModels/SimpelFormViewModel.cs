@@ -22,5 +22,7 @@ namespace Pre.Form___home.Web.ViewModels
         public string Email { get; set; }
         [Display(Name ="Subscribe me")]
         public bool Subscribed { get; set; }
+        
+        public SimpleSelectVm SelectItem { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Pre.Form___home.Web.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Pre.Form___home.Web.Controllers
 {
@@ -12,6 +13,17 @@ namespace Pre.Form___home.Web.Controllers
         public IActionResult Index()
         {
             SimpelFormViewModel simpelFormVm = new SimpelFormViewModel();
+            simpelFormVm.SelectItem = new SimpleSelectVm
+            {
+                SelectCountryId = 1,
+                Countries = new List<SelectListItem>
+                {
+                    new SelectListItem{Value = "0", Text = "==Pick a Country=="},
+                    new SelectListItem{Value = "1",Text ="Belgium"},
+                    new SelectListItem{Value= "2",Text = "Nederland"},
+                    new SelectListItem{Value = "3",Text="Duitsland"}
+                }
+            };
             simpelFormVm.Subscribed = true;
             return View(simpelFormVm);
         }
