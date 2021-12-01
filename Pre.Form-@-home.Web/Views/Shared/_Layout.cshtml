@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Pre.Form___home.Web</title>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("header",false)
 </head>
 <body>
     <header>
@@ -59,6 +60,6 @@
         <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

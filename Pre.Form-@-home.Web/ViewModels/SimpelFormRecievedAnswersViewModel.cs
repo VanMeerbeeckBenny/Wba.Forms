@@ -8,7 +8,7 @@ namespace Pre.Form___home.Web.ViewModels
 {
     public class SimpelFormRecievedAnswersViewModel
     {
-        
+        public Guid Id { get; set; }
         public string FirstName { get; set; }     
         public string LastName { get; set; }
         public string Email { get; set; }      

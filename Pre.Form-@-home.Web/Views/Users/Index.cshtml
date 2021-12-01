@@ -1,0 +1,49 @@
+﻿@model UsersIndexViewModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label asp-for="@Model.Users.First().FirstName"></label>
+            </th>
+            <th>
+                <label asp-for="@Model.Users.First().LastName"></label>
+            </th>            
+            <th>
+                <label asp-for="@Model.Users.First().Email"></label>
+            </th>      
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in @Model.Users) {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+           
+            <td>
+                @item.Email
+            </td>           
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

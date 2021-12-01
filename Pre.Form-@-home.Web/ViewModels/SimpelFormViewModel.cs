@@ -8,6 +8,7 @@ namespace Pre.Form___home.Web.ViewModels
 {
     public class SimpelFormViewModel
     {
+        public Guid? Id { get; set; }
         [Required(ErrorMessage = "Gelieve {0} in te vullen")]
         [Display(Name = "Voornaam")]
         [MaxLength(50,ErrorMessage ="{0} mag nier langer zijn dan {1}")]
